@@ -1,11 +1,9 @@
-
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronUp } from 'lucide-react';
+import { ChevronUp } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [showScrollTop, setShowScrollTop] = useState(false);
   const isMobile = useIsMobile();
@@ -58,7 +56,6 @@ const NavBar = () => {
         behavior: 'smooth'
       });
     }
-    setIsMobileMenuOpen(false);
   };
 
   // Scroll to top
@@ -127,72 +124,27 @@ const NavBar = () => {
 
       {/* Mobile Navigation - Fixed at bottom, always visible on mobile */}
       {isMobile && (
-        <>
-          {/* Mobile Menu Expanded Content */}
-          {isMobileMenuOpen && (
-            <div className="fixed bottom-16 left-0 right-0 bg-white border-t border-seo-lightGray p-4 shadow-lg z-40 animate-slide-up">
-              <div className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    className={`text-lg py-2 px-4 rounded-md transition-colors ${
-                      activeSection === link.section 
-                        ? 'bg-seo-blue/10 text-seo-blue' 
-                        : 'text-seo-darkGray hover:bg-seo-lightGray'
-                    }`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToSection(link.section);
-                    }}
-                  >
-                    {link.name}
-                  </a>
-                ))}
-                <a 
-                  href="#contact"
-                  className="btn btn-primary rounded-md text-center py-3"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection('contact');
-                  }}
-                >
-                  Get Free Consultation
-                </a>
-              </div>
-            </div>
-          )}
-
-          {/* Mobile Fixed Bottom Navigation Bar */}
-          <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-seo-lightGray shadow-lg z-50">
-            <div className="flex justify-around items-center h-16">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className={`flex flex-col items-center justify-center px-2 py-1 ${
-                    activeSection === link.section ? 'text-seo-blue' : 'text-seo-darkGray'
-                  }`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.section);
-                  }}
-                >
-                  <span className="text-xs font-medium">{link.name}</span>
-                </a>
-              ))}
-              <button
-                className="flex flex-col items-center justify-center px-2 py-1 text-seo-darkGray"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-seo-lightGray shadow-lg z-50">
+          <div className="flex justify-around items-center h-16">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`flex items-center justify-center px-2 py-1 ${
+                  activeSection === link.section 
+                    ? 'text-seo-blue font-medium' 
+                    : 'text-seo-darkGray'
+                } transition-colors`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.section);
+                }}
               >
-                {isMobileMenuOpen ? 
-                  <><X size={18} /><span className="text-xs font-medium">Close</span></> : 
-                  <><Menu size={18} /><span className="text-xs font-medium">Menu</span></>
-                }
-              </button>
-            </div>
-          </nav>
-        </>
+                <span className="text-sm">{link.name}</span>
+              </a>
+            ))}
+          </div>
+        </nav>
       )}
 
       {/* Scroll to Top Button - Adjust position based on device */}
