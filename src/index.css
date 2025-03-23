@@ -55,8 +55,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -121,7 +121,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg dark:bg-seo-darkBlue/80 dark:border-seo-darkBlue/20;
   }
   
   .section-container {
@@ -137,12 +137,12 @@
   }
   
   .service-card {
-    @apply bg-white rounded-xl border border-seo-lightGray p-6 transition-all duration-300
+    @apply bg-white dark:bg-seo-darkBlue rounded-xl border border-seo-lightGray dark:border-seo-darkGray p-6 transition-all duration-300
     hover:shadow-lg hover:border-seo-blue hover:scale-[1.02];
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-seo-darkGray hover:text-seo-blue transition-colors duration-200
+    @apply relative px-3 py-2 text-seo-darkGray dark:text-white hover:text-seo-blue dark:hover:text-seo-lightBlue transition-colors duration-200
     after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 
     after:bg-seo-blue after:origin-bottom-right after:transition-transform after:duration-300 
     hover:after:scale-x-100 hover:after:origin-bottom-left;
@@ -155,12 +155,12 @@
   
   .btn-primary {
     @apply bg-seo-blue text-white hover:bg-seo-blue/90 shadow-md hover:shadow-lg
-    transition-all duration-300 py-2.5 px-5;
+    transition-all duration-300 py-2.5 px-5 dark:bg-seo-blue/90 dark:hover:bg-seo-blue;
   }
   
   .btn-outline {
     @apply border border-seo-blue text-seo-blue hover:bg-seo-blue/10 
-    transition-all duration-300 py-2.5 px-5;
+    transition-all duration-300 py-2.5 px-5 dark:text-seo-lightBlue dark:border-seo-lightBlue dark:hover:bg-seo-blue/20;
   }
 }
 
@@ -192,4 +192,10 @@
     transform: translateY(100%);
     transition: transform 300ms ease-in;
   }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
 }

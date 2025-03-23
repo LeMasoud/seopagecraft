@@ -42,13 +42,13 @@ const Index = () => {
         <Contact />
       </main>
       
-      <footer className="bg-white py-8 border-t border-seo-lightGray">
+      <footer className="bg-white dark:bg-seo-darkBlue py-8 border-t border-seo-lightGray dark:border-seo-darkGray">
         <div className="section-container">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <span className="text-xl font-bold text-seo-darkBlue">SEO<span className="text-seo-blue">mad</span></span>
+              <span className="text-xl font-bold text-seo-darkBlue dark:text-white">SEO<span className="text-seo-blue dark:text-seo-lightBlue">mad</span></span>
             </div>
-            <div className="text-seo-darkGray/70 text-sm">
+            <div className="text-seo-darkGray/70 dark:text-seo-lightGray/70 text-sm">
               © {new Date().getFullYear()} SEOmad. All rights reserved.
             </div>
           </div>

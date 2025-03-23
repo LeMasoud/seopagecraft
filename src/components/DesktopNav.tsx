@@ -24,7 +24,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white shadow-md py-2' 
+          ? 'bg-white dark:bg-seo-darkBlue shadow-md py-2' 
           : 'bg-transparent py-4'
       }`}
     >
@@ -33,13 +33,13 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
           {/* Logo */}
           <a 
             href="#home" 
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-2 min-h-[44px] min-w-[44px] focus:outline-2 focus:outline-offset-2 focus:outline-seo-blue"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection('home');
             }}
           >
-            <span className="text-2xl font-bold text-seo-darkBlue">SEO<span className="text-seo-blue">mad</span></span>
+            <h1 className="text-2xl font-bold text-seo-darkBlue dark:text-white">SEO<span className="text-seo-blue">mad</span></h1>
           </a>
 
           {/* Desktop Nav Links */}
@@ -48,7 +48,9 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
               <a
                 key={link.name}
                 href={link.href}
-                className={`nav-link ${activeSection === link.section ? 'text-seo-blue after:scale-x-100' : ''}`}
+                className={`nav-link min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-2 focus:outline-offset-2 focus:outline-seo-blue ${activeSection === link.section 
+                  ? 'text-seo-blue dark:text-seo-lightBlue after:scale-x-100' 
+                  : 'text-seo-darkGray dark:text-white'}`}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(link.section);
@@ -59,7 +61,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
             ))}
             <a 
               href="#contact"
-              className="btn btn-primary rounded-full"
+              className="btn btn-primary rounded-full min-h-[44px] min-w-[44px] focus:outline-2 focus:outline-offset-2 focus:outline-seo-blue"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection('contact');
