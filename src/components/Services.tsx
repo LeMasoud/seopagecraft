@@ -8,7 +8,7 @@ const Services = () => {
     {
       title: 'Technical SEO',
       icon: <Laptop size={24} />,
-      description: 'Optimize your website's technical foundation to improve crawling, indexing, and ranking.',
+      description: `Optimize your website's technical foundation to improve crawling, indexing, and ranking.`,
       features: [
         'Website structure optimization',
         'Site speed enhancements',
@@ -34,7 +34,7 @@ const Services = () => {
     {
       title: 'Off-Page Optimization',
       icon: <Globe size={24} />,
-      description: 'Build your website's authority and reputation through external factors.',
+      description: `Build your website's authority and reputation through external factors.`,
       features: [
         'Quality backlink acquisition',
         'Digital PR strategies',
