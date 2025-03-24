@@ -103,19 +103,19 @@
   }
   
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl;
+    @apply text-4xl sm:text-5xl md:text-6xl dark:text-white dark:font-semibold;
   }
   
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-4xl dark:text-white dark:font-semibold;
   }
   
   h3 {
-    @apply text-2xl sm:text-3xl;
+    @apply text-2xl sm:text-3xl dark:text-white dark:font-semibold;
   }
   
   p {
-    @apply leading-7;
+    @apply leading-7 dark:text-[#EAEAEA];
   }
 }
 
@@ -138,7 +138,7 @@
   
   .service-card {
     @apply bg-white dark:bg-seo-darkBlue rounded-xl border border-seo-lightGray dark:border-seo-darkGray p-6 transition-all duration-300
-    hover:shadow-lg hover:border-seo-blue hover:scale-[1.02];
+    hover:shadow-lg hover:border-seo-blue hover:scale-[1.02] dark:text-[#EAEAEA];
   }
   
   .nav-link {
@@ -155,7 +155,7 @@
   
   .btn-primary {
     @apply bg-seo-blue text-white hover:bg-seo-blue/90 shadow-md hover:shadow-lg
-    transition-all duration-300 py-2.5 px-5 dark:bg-seo-blue/90 dark:hover:bg-seo-blue;
+    transition-all duration-300 py-2.5 px-5 dark:bg-seo-blue/90 dark:hover:bg-seo-blue dark:text-white;
   }
   
   .btn-outline {

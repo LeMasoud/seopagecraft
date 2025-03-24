@@ -24,7 +24,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ navLinks, activeSection, scrollTo
             className={`flex items-center justify-center min-h-[44px] min-w-[44px] px-3 py-2 rounded-md focus:outline-2 focus:outline-offset-2 focus:outline-seo-blue transition-colors ${
               activeSection === link.section 
                 ? 'text-seo-blue dark:text-seo-lightBlue font-medium' 
-                : 'text-seo-darkGray dark:text-seo-lightGray hover:text-seo-blue dark:hover:text-seo-lightBlue'
+                : 'text-seo-darkGray dark:text-[#EAEAEA] hover:text-seo-blue dark:hover:text-seo-lightBlue'
             }`}
             onClick={(e) => {
               e.preventDefault();

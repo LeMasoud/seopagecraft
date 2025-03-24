@@ -33,11 +33,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <div className="text-seo-blue">
             {icon}
           </div>
-          <h3 className="text-xl font-semibold text-seo-darkBlue">{title}</h3>
+          <h3 className="text-xl font-semibold text-seo-darkBlue dark:text-white">{title}</h3>
         </div>
         <button
           onClick={toggleExpand}
-          className="text-seo-blue hover:text-seo-darkBlue transition-colors"
+          className="text-seo-blue hover:text-seo-darkBlue dark:hover:text-seo-lightBlue transition-colors"
           aria-expanded={isExpanded}
           aria-label={isExpanded ? "Collapse details" : "Expand details"}
         >
@@ -45,7 +45,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </button>
       </div>
       
-      <p className="mt-3 text-seo-darkGray/80">
+      <p className="mt-3 text-seo-darkGray/80 dark:text-[#EAEAEA]">
         {description}
       </p>
       
@@ -56,7 +56,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       >
         <ul className="space-y-2 pl-5">
           {features.map((feature, index) => (
-            <li key={index} className="list-disc text-seo-darkGray/80">
+            <li key={index} className="list-disc text-seo-darkGray/80 dark:text-[#EAEAEA]">
               {feature}
             </li>
           ))}
