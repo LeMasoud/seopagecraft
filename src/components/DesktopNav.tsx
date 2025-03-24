@@ -39,7 +39,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
               scrollToSection('home');
             }}
           >
-            <h1 className="text-2xl font-bold text-seo-darkBlue dark:text-white">SEO<span className="text-seo-blue">mad</span></h1>
+            <h1 className="text-2xl font-bold text-seo-darkBlue dark:text-white">SEO<span className="text-seo-blue dark:text-seo-lightBlue">mad</span></h1>
           </a>
 
           {/* Desktop Nav Links */}
@@ -50,7 +50,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({
                 href={link.href}
                 className={`nav-link min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-2 focus:outline-offset-2 focus:outline-seo-blue ${activeSection === link.section 
                   ? 'text-seo-blue dark:text-seo-lightBlue after:scale-x-100' 
-                  : 'text-seo-darkGray dark:text-white'}`}
+                  : 'text-seo-darkGray dark:text-white hover:text-seo-blue dark:hover:text-seo-lightBlue'}`}
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToSection(link.section);

@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Index = () => {
   // Initialize animation observers once the page loads
@@ -54,6 +55,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      <ThemeToggle />
     </div>
   );
 };

@@ -47,7 +47,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ className }) => {
 
   return (
     <button 
-      className={`fixed ${isMobile ? 'bottom-20' : 'bottom-6'} right-6 text-primary-foreground p-3 rounded-full shadow-lg z-40 transition-all duration-300 outline-offset-2 focus:outline-2 focus:outline-ring ${className} ${
+      className={`fixed ${isMobile ? 'bottom-20' : 'bottom-6'} right-6 p-3 rounded-full shadow-lg z-40 transition-all duration-300 outline-offset-2 focus:outline-2 focus:outline-ring ${className} ${
         theme === 'dark' ? 'bg-seo-blue' : 'bg-seo-darkBlue'
       }`}
       onClick={toggleTheme}
