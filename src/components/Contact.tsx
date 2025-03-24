@@ -34,16 +34,16 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-seo-gray">
+    <section id="contact" className="py-20 md:py-28 bg-seo-gray dark:bg-seo-darkBlue">
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-          <div className="inline-block px-3 py-1 mb-4 rounded-full bg-seo-blue/10 text-seo-blue text-sm font-medium">
+          <div className="inline-block px-3 py-1 mb-4 rounded-full bg-seo-blue/10 text-seo-blue dark:bg-seo-blue/20 dark:text-seo-lightBlue text-sm font-medium">
             Get In Touch
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-seo-darkBlue mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-seo-darkBlue dark:text-white mb-6">
             Ready to elevate your SEO?
           </h2>
-          <p className="text-lg text-seo-darkGray/80">
+          <p className="text-lg text-seo-darkGray/80 dark:text-[#EAEAEA]">
             Contact us for a free consultation and discover how our data-driven strategies can help your business achieve sustainable growth.
           </p>
         </div>
@@ -51,12 +51,12 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Contact Form */}
           <div className="lg:col-span-3 animate-on-scroll">
-            <div className="glass-card rounded-2xl overflow-hidden">
+            <div className="glass-card rounded-2xl overflow-hidden dark:bg-seo-darkGray/30 dark:border-seo-darkGray/50">
               <div className="p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-seo-darkBlue mb-6">Send us a message</h3>
+                <h3 className="text-2xl font-bold text-seo-darkBlue dark:text-white mb-6">Send us a message</h3>
                 
                 {isSubmitted ? (
-                  <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 mb-6 animate-scale-in">
+                  <div className="bg-green-50 border border-green-200 text-green-800 dark:bg-green-950/30 dark:border-green-900 dark:text-green-400 rounded-lg p-4 mb-6 animate-scale-in">
                     <p className="font-medium">Thank you for your message!</p>
                     <p className="text-sm mt-1">We'll get back to you as soon as possible.</p>
                   </div>
@@ -65,7 +65,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-seo-darkGray mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-seo-darkGray dark:text-[#C8C8C9] mb-2">
                         Your Name
                       </label>
                       <input
@@ -75,13 +75,13 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all dark:bg-seo-darkGray/50 dark:border-seo-darkGray dark:text-white"
                         placeholder="Enter your name"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-seo-darkGray mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-seo-darkGray dark:text-[#C8C8C9] mb-2">
                         Email Address
                       </label>
                       <input
@@ -91,13 +91,13 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all"
+                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all dark:bg-seo-darkGray/50 dark:border-seo-darkGray dark:text-white"
                         placeholder="Enter your email"
                       />
                     </div>
                     
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-seo-darkGray mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-seo-darkGray dark:text-[#C8C8C9] mb-2">
                         Message
                       </label>
                       <textarea
@@ -107,7 +107,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         rows={5}
-                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-seo-lightGray focus:border-seo-blue focus:ring-2 focus:ring-seo-blue/20 outline-none transition-all resize-none dark:bg-seo-darkGray/50 dark:border-seo-darkGray dark:text-white"
                         placeholder="Tell us about your project..."
                       ></textarea>
                     </div>
@@ -137,49 +137,49 @@ const Contact = () => {
           
           {/* Contact Information */}
           <div className="lg:col-span-2 animate-on-scroll">
-            <div className="glass-card rounded-2xl overflow-hidden">
+            <div className="glass-card rounded-2xl overflow-hidden dark:bg-seo-darkGray/30 dark:border-seo-darkGray/50">
               <div className="p-8 md:p-10">
-                <h3 className="text-2xl font-bold text-seo-darkBlue mb-6">Contact Information</h3>
+                <h3 className="text-2xl font-bold text-seo-darkBlue dark:text-white mb-6">Contact Information</h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-seo-blue/10 flex items-center justify-center text-seo-blue">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-seo-blue/10 flex items-center justify-center text-seo-blue dark:bg-seo-blue/20 dark:text-seo-lightBlue">
                       <Mail size={20} />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-seo-darkBlue mb-1">Email Us</h4>
-                      <a href="mailto:info@seomad.com" className="text-seo-blue hover:underline transition-all">
+                      <h4 className="text-lg font-semibold text-seo-darkBlue dark:text-white mb-1">Email Us</h4>
+                      <a href="mailto:info@seomad.com" className="text-seo-blue hover:underline transition-all dark:text-seo-lightBlue">
                         info@seomad.com
                       </a>
-                      <p className="text-sm text-seo-darkGray/70 mt-1">
+                      <p className="text-sm text-seo-darkGray/70 dark:text-[#C8C8C9] mt-1">
                         We'll respond within 24 hours
                       </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-seo-blue/10 flex items-center justify-center text-seo-blue">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-seo-blue/10 flex items-center justify-center text-seo-blue dark:bg-seo-blue/20 dark:text-seo-lightBlue">
                       <Phone size={20} />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold text-seo-darkBlue mb-1">Call Us</h4>
-                      <a href="tel:+1234567890" className="text-seo-blue hover:underline transition-all">
+                      <h4 className="text-lg font-semibold text-seo-darkBlue dark:text-white mb-1">Call Us</h4>
+                      <a href="tel:+1234567890" className="text-seo-blue hover:underline transition-all dark:text-seo-lightBlue">
                         +1 (234) 567-890
                       </a>
-                      <p className="text-sm text-seo-darkGray/70 mt-1">
+                      <p className="text-sm text-seo-darkGray/70 dark:text-[#C8C8C9] mt-1">
                         Mon-Fri from 9am to 6pm
                       </p>
                     </div>
                   </div>
                   
-                  <div className="pt-8 border-t border-seo-lightGray">
-                    <h4 className="text-lg font-semibold text-seo-darkBlue mb-4">Follow Us</h4>
+                  <div className="pt-8 border-t border-seo-lightGray dark:border-seo-darkGray/50">
+                    <h4 className="text-lg font-semibold text-seo-darkBlue dark:text-white mb-4">Follow Us</h4>
                     <div className="flex space-x-4">
                       {['twitter', 'facebook', 'linkedin', 'instagram'].map((social) => (
                         <a
                           key={social}
                           href={`#${social}`}
-                          className="w-10 h-10 rounded-full bg-seo-blue/10 flex items-center justify-center text-seo-blue hover:bg-seo-blue hover:text-white transition-all"
+                          className="w-10 h-10 rounded-full bg-seo-blue/10 flex items-center justify-center text-seo-blue hover:bg-seo-blue hover:text-white transition-all dark:bg-seo-blue/20 dark:text-seo-lightBlue dark:hover:bg-seo-blue dark:hover:text-white"
                           aria-label={`Follow us on ${social}`}
                         >
                           <span className="sr-only">{social}</span>
