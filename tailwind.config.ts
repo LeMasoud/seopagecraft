@@ -69,7 +69,8 @@ export default {
 					lightBlue: '#93C5FD',
 					gray: '#F7F9FC',
 					darkGray: '#1F2937',
-					lightGray: '#E5E7EB'
+					lightGray: '#E5E7EB',
+					sectionBg: 'hsl(var(--section-background))'
 				}
 			},
 			borderRadius: {
