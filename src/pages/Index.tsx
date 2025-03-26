@@ -33,7 +33,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col dark:bg-seo-darkBlue">
+    <div className="min-h-screen flex flex-col dark:bg-background">
       <NavBar />
       
       <main className="flex-grow">
@@ -43,13 +43,13 @@ const Index = () => {
         <Contact />
       </main>
       
-      <footer className="bg-white dark:bg-seo-darkBlue py-8 border-t border-seo-lightGray dark:border-seo-darkGray">
+      <footer className="bg-white dark:bg-background py-8 border-t border-seo-lightGray dark:border-border">
         <div className="section-container">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <span className="text-xl font-bold text-seo-darkBlue dark:text-white">SEO<span className="text-seo-blue dark:text-seo-lightBlue">mad</span></span>
             </div>
-            <div className="text-seo-darkGray/70 dark:text-[#C8C8C9] text-sm">
+            <div className="text-seo-darkGray/70 dark:text-muted-foreground text-sm">
               © {new Date().getFullYear()} SEOmad. All rights reserved.
             </div>
           </div>
